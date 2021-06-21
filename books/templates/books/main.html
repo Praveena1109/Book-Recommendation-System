@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> My Library</title>
+    <link rel="stylesheet" href="{% static 'css/nav.css'%}">
+  </head>
+  <body>
+    {% include 'books/navbar.html' %}
+
+    {% block content%}
+
+    {% endblock %}
+
+    <hr>
+    <h5>Footer</h5>
+  </body>
+  <script>
+    var menulist = document.getElementById("menulist");
+    menulist.style.maxHeight = "0px";
+    function togglemenu(){
+      if(menulist.style.maxHeight=="0px")
+      {
+        menulist.style.maxHeight="130px";
+      }
+      else {
+        menulist.style.maxHeight="0px";
+      }
+    }
+  </script>
+</html>

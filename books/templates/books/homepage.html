@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Library</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img src="{% static 'images/read-book.png'%}" class="logo">
+        <nav>
+          <ul id="menulist">
+            <li><a href="">SignUp</a></li>
+            <li><a href="">LogIn</a></li>
+          </ul>
+        </nav>
+        <img src="{% static 'images/MenuIcon.png'%}" class="menu-icon" onclick="togglemenu()">
+      </div>
+      <div class="row">
+        <div class="col-1">
+          <h2> Book Recommendation System </h2>
+          <h3> Desciption </h3>
+          <p> More details</p>
+          <button class="my_button" type="my_button">Log In</button>
+        </div>
+        <div class="col-2">
+          <img src="{% static 'images/HomePageImage1.jpg'%}" class="readImage">
+        </div>
+      </div>
+    </div>
+    <script>
+      var menulist = document.getElementById("menulist");
+      menulist.style.maxHeight = "130px";
+      function togglemenu(){
+        if(menulist.style.maxHeight=="130px")
+        {
+          menulist.style.maxHeight="0px";
+        }
+        else {
+          menulist.style.maxHeight="130px";
+        }
+      }
+    </script
+  </body>
+</html>

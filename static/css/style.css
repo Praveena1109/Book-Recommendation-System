@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+}
+.logo{
+    width: 30px;
+    cursor: pointer;
+    padding-left: 2%;
+    margin: 10px 0;
+}
+.menu-icon{
+    width: 30px;
+    cursor: pointer;
+    padding-right: 2%;
+    display: none;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+nav ul li a:hover{
+    color: #ff5ea2;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px 0;
+}
+
+.col-1{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 100px;
+}
+.col-1 h2{
+    font-size: 40px;
+}
+.col-1 h3{
+    font-size: 28px;
+    color: #707070;
+    font-weight: 100;
+    margin: 20px 0 10px;
+}
+.col-1 p{
+    font-size: 22px;
+    color: #b7b7b7;
+    font-weight: 100;
+    padding-bottom: 5%;
+}
+.my_button{
+    width: 100px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(to right,#808080, #000000);
+    border-radius: 6px;
+    cursor: pointer;
+}
+.col-1::after{
+    content: "";
+    width: 10px;
+    height: 95%;
+    background: linear-gradient(#000000,#808080);
+    position: absolute;
+    left: -40px;
+    top: 10px;
+}
+.col-2{
+    position: relative;
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+    left: 100px;
+}
+.col-2 .readImage{
+    width: 60%;
+    border-radius: 60%;
+}
+
+@media only screen and (max-width:700px){
+    nav ul{
+        width: 100%;
+        background: #000000;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menulist{
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .row{
+        flex-direction: column-reverse;
+        margin: 30px 0;
+    }
+    .col-2{
+        flex basis: 100%;
+        margin-bottom: 50px:
+    }
+    .col-2 .readImage{
+        width: 50%;
+        border-radius: 50%;
+        padding-bottom: 5%
+    }
+    .col-1{
+        flex-basis: 100%;
+        left: -20px;
+    }
+    .col-1 h2{
+        font-size: 28px;
+    }
+    .col-1 h3{
+        font-size: 18px;
+    }
+    .col-1 p{
+        font-size: 14px;
+    }
+}
