@@ -1,7 +1,99 @@
-{% extends 'books/main.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Library</title>
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+  </head>
+  <body>
+    <div class="container">
+      <h4 class="topnav_name">Name</h4>
+      <p class="topempty"></p>
+      <a class="topnav_link" href=""><span class="nav_name">Logout</span></a>
+      <div class="main">
+        <div class="search">
+  				<form class="search-form">
+  					<input type="text" placeholder="Search for books, authors, categories...">
+  					<input type="submit" value="Submit">
+  				</form>
+			  </div>
+      </div>
+      <h3 class="nav_subtitle1">My Bookshelf</h3>
+      <a class="nav_link1" href=""><span class="nav_name">Favourites</span></a>
+      <a class="nav_link2" href=""><span class="nav_name">To Read</span></a>
+      <h3 class="nav_subtitle2">Find Books</h3>
+      <a class="nav_link3" href=""><span class="nav_name">For You</span></a>
+      <a class="nav_link4" href=""><span class="nav_name">Popular</span></a>
+      <a class="nav_link5" href=""><span class="nav_name">Category</span></a>
+      <p class="empty"></p>
+      <div class="content">
+        <div class="sub-content">
+          <h4 class="head1">For You</h4>
+          <div class="content11">
+            {% include 'books/card.html' %}
+          </div>
+          <div class="content12">
+            {% include 'books/card.html' %}
+          </div>
+          <div class="content13">
+            {% include 'books/card.html' %}
+          </div>
+          <div class="content14">
+            {% include 'books/card.html' %}
+          </div>
+          <a href="" class="end1">Show All</a>
+          <div class="content15">
+            {% include 'books/card.html' %}
+          </div>
+          <h4 class="head2">Popular</h4>
+          <div class="content21">
+            {% include 'books/card.html' %}
+          </div>
+          <div class="content22">
+            {% include 'books/card.html' %}
+          </div>
+          <div class="content23">
+            {% include 'books/card.html' %}
+          </div>
+          <div class="content24">
+            {% include 'books/card.html' %}
+          </div>
+          <a href="" class="end2">Show All</a>
+          <div class="content25">
+            {% include 'books/card.html' %}
+          </div>
+          <h4 class="head3">Category 1</h4>
+          <div class="content31">
+            {% include 'books/card.html' %}
+          </div>
+          <div class="content32">
+            {% include 'books/card.html' %}
+          </div>
+          <div class="content33">
+            {% include 'books/card.html' %}
+          </div>
+          <div class="content34">
+            {% include 'books/card.html' %}
+          </div>
+          <a href="" class="end3">Show All</a>
+          <div class="content35">
+            {% include 'books/card.html' %}
+          </div>
 
-{% block content %}
-
-<h1> Home </h1>
-
-{% endblock %}
+          <div class="content4">
+            <h4>Category 2</h4>
+            {% include 'books/card.html' %}
+          </div>
+          <div class="content5">
+            <h4>All Books</h4>
+            {% include 'books/card.html' %}
+          </div>
+          <div class="content6">
+            {% include 'books/card.html' %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
