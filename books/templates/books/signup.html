@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Library</title>
+    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+  </head>
+  <body>
+    <div class="container">
+      <h4 class="topnav_name">Name</h4>
+      <h4 class="topempty"></h4>
+      <a class="topnav_link1" href=""><span class="nav_name">SignUp</span></a>
+      <a class="topnav_link2" href=""><span class="nav_name">LogIn</span></a>
+      <div class="main">
+        <div class="main-container">
+          <div class="empty1">
+          </div>
+          <div class="right-side">
+            <div class="header">
+              <h2>CREATE  ACCOUNT</h2>
+            </div>
+            <form action="">
+              <div class="input-container">
+                <input type="text" placeholder="First Name" class="input-field">
+                <input type="text" placeholder="Last Name" class="input-field">
+                <input type="text" placeholder="Email Address" class="input-field">
+                <input type="text" placeholder="Country" class="input-field">
+                <input type="password" placeholder="Password" class="input-field">
+                <input type="password" placeholder="Confirm Password" class="input-field">
+                <button class="btn">Sign Up</button>
+                <p>Already have an account?</p>
+                <div class="anchortag">
+                  <a href="">LogIn</a>
+                </div>
+              </div>
+            </form>
+            <div class="empty2">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

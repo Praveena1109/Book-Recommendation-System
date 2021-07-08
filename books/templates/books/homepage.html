@@ -4,44 +4,25 @@
   <head>
     <meta charset="utf-8">
     <title>My Library</title>
-    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/homepage.css'%}">
   </head>
   <body>
     <div class="container">
-      <div class="navbar">
-        <img src="{% static 'images/read-book.png'%}" class="logo">
-        <nav>
-          <ul id="menulist">
-            <li><a href="">SignUp</a></li>
-            <li><a href="">LogIn</a></li>
-          </ul>
-        </nav>
-        <img src="{% static 'images/MenuIcon.png'%}" class="menu-icon" onclick="togglemenu()">
-      </div>
-      <div class="row">
-        <div class="col-1">
-          <h2> Book Recommendation System </h2>
-          <h3> Desciption </h3>
-          <p> More details</p>
-          <button class="my_button" type="my_button">Log In</button>
-        </div>
-        <div class="col-2">
-          <img src="{% static 'images/HomePageImage1.jpg'%}" class="readImage">
+      <h4 class="topnav_name">Name</h4>
+      <p class="topempty"></p>
+      <a class="topnav_link1" href=""><span class="nav_name">SignUp</span></a>
+      <a class="topnav_link2" href=""><span class="nav_name">LogIn</span></a>
+      <div class="main">
+        <div class="sub-main">
+          <img class="main-image" src="{% static 'images/boyread.gif'%}">
+          <div class="main-details">
+            <h2 class="main-title"> Book Recommendation System</h2>
+            <h3 class="main-subtitle"> Desciption </h3>
+            <p class="main-description"> More details</p>
+            <a class="main-link" href=""><span class="main_name">LogIn</span></a>
+          </div>
         </div>
       </div>
     </div>
-    <script>
-      var menulist = document.getElementById("menulist");
-      menulist.style.maxHeight = "130px";
-      function togglemenu(){
-        if(menulist.style.maxHeight=="130px")
-        {
-          menulist.style.maxHeight="0px";
-        }
-        else {
-          menulist.style.maxHeight="130px";
-        }
-      }
-    </script
   </body>
 </html>
