@@ -17,6 +17,7 @@
   grid-column: 1/2;
   grid-row: 1/2;
   background: #000;
+  opacity: 0.9;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: .1rem;
@@ -27,11 +28,13 @@
   grid-row: 1/2;
   grid-column: 2/3;
   background: #000;
+  opacity: 0.9;
 }
 .topnav_link{
   grid-column: 3/4;
   grid-row: 1/2;
   background: #000;
+  opacity: 0.9;
   text-decoration: none;
   color: #fff;
   text-align: right;
@@ -48,6 +51,7 @@
   color: #fff;
   letter-spacing: .1rem;
   background: #000;
+  opacity: 0.9;
   padding-left: var(--left--padding);
   padding-top: var(--main--padding);
 
@@ -59,6 +63,7 @@
   color: #fff;
   letter-spacing: .1rem;
   background: #000;
+  opacity: 0.9;
   padding-top: var(--main--padding);
   padding-left: var(--left--padding);
 }
@@ -69,6 +74,7 @@
   text-decoration: none;
   color: #fff;
   background: #000;
+  opacity: 0.9;
   padding-top: var(--main--padding);
   padding-left: var(--left--padding);
 }
@@ -79,6 +85,7 @@
   text-decoration: none;
   color: #fff;
   background: #000;
+  opacity: 0.9;
   padding-top: var(--main--padding);
   padding-left: var(--left--padding);
 }
@@ -89,6 +96,7 @@
   text-decoration: none;
   color: #fff;
   background: #000;
+  opacity: 0.9;
   padding-top: var(--main--padding);
   padding-left: var(--left--padding);
 }
@@ -99,6 +107,7 @@
   text-decoration: none;
   color: #fff;
   background: #000;
+  opacity: 0.9;
   padding-top: var(--main--padding);
   padding-left: var(--left--padding);
 }
@@ -109,6 +118,7 @@
   text-decoration: none;
   color: #fff;
   background: #000;
+  opacity: 0.9;
   padding-top: var(--main--padding);
   padding-left: var(--left--padding);
 }
@@ -129,6 +139,7 @@
 }
 .empty{
   background: #000;
+  opacity: 0.9;
 }
 .main{
   grid-column: 2/4;
@@ -140,8 +151,7 @@
 }
 .search
 {
-	border: 2px solid #000;
-	border-radius: 5px;
+	border: 1px solid #000;
 }
 .search input[type="text"]
 {
@@ -160,6 +170,7 @@
   font-size: 16px;
 	background: none;
 	background-color: #000;
+  opacity: 0.9;
 	color: #fff;
 	float: right;
 	padding: 10px;
@@ -169,11 +180,11 @@
   padding-left: 8px;
   grid-column: 2/4;
   grid-row: 3/10;
-  /* background: #6fffd2; */
   padding-top: var(--main--padding);
   padding-bottom: var(--main--padding);
   overflow-y: scroll;
 }
+
 @media only screen and (max-width: 550px) {
   .container{
     display: grid;
@@ -184,27 +195,16 @@
   .topnav_name{
     grid-column: 1/2;
     grid-row: 1/2;
-    /* background: #000;
-    text-transform: uppercase;
-    color: #fff;
-    letter-spacing: .1rem;
-    padding-left: var(--left--padding);
-    padding-top: var(--main--padding); */
   }
   .empty{
     grid-column: 2/5;
     grid-row: 1/2;
     background: #000;
+    opacity: 0.9;
   }
   .topnav_link{
     grid-column: 5/6;
     grid-row: 1/2;
-    /* background: #000;
-    text-decoration: none;
-    color: #fff;
-    text-align: right;
-    padding-right: 20px;
-    padding-top: var(--main--padding); */
   }
   .nav_subtitle1{
     display: none;
@@ -217,11 +217,6 @@
     grid-row: 2/3;
     padding-bottom: var(--main--padding);
     padding-top: var(--main--padding);
-    /* align-items: center;
-    text-decoration: none;
-    color: #fff;
-    background: #000;
-    padding-left: var(--left--padding); */
   }
   .nav_link2{
     grid-column: 2/3;
@@ -229,11 +224,6 @@
     padding-top: var(--main--padding);
     padding-bottom: var(--main--padding);
     text-align: center;
-    /* align-items: center;
-    text-decoration: none;
-    color: #fff;
-    background: #000;
-    padding-left: var(--left--padding); */
   }
   .nav_link3{
     grid-column: 3/4;
@@ -241,11 +231,6 @@
     text-align: center;
     padding-bottom: var(--main--padding);
     padding-top: var(--main--padding);
-    /* align-items: center;
-    text-decoration: none;
-    color: #fff;
-    background: #000;
-    padding-left: var(--left--padding); */
   }
   .nav_link4{
     grid-column: 4/5;
@@ -253,11 +238,6 @@
     padding-top: var(--main--padding);
     padding-bottom: var(--main--padding);
     text-align: center;
-    /* align-items: center;
-    text-decoration: none;
-    color: #fff;
-    background: #000;
-    padding-left: var(--left--padding); */
   }
   .nav_link5{
     grid-column: 5/6;
@@ -266,11 +246,6 @@
     padding-top: var(--main--padding);
     padding-bottom: var(--main--padding);
     padding-right: 20px;
-    /* align-items: center; */
-    /* text-decoration: none;
-    color: #fff;
-    background: #000;
-    padding-left: var(--left--padding); */
   }
   .main{
     grid-column: 1/6;
@@ -286,7 +261,5 @@
   .content{
     grid-column: 1/6;
     grid-row: 4/5;
-    /* background: #6fffd2;
-    padding-top: var(--main--padding); */
   }
 }

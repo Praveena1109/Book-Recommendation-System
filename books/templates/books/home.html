@@ -2,69 +2,10 @@
 {% load static%}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/home.css'%}">
-<div class="sub-content">
-  <h4 class="head1">For You</h4>
-  <div class="content11">
+<h4 class="head1">All Books</h4>
+<div class="content1">
+  {% for book in books %}
     {% include 'books/card.html' %}
-  </div>
-  <div class="content12">
-    {% include 'books/card.html' %}
-  </div>
-  <div class="content13">
-    {% include 'books/card.html' %}
-  </div>
-  <div class="content14">
-    {% include 'books/card.html' %}
-  </div>
-  <a href="" class="end1">Show All</a>
-  <div class="content15">
-    {% include 'books/card.html' %}
-  </div>
-  <h4 class="head2">Popular</h4>
-  <div class="content21">
-    {% include 'books/card.html' %}
-  </div>
-  <div class="content22">
-    {% include 'books/card.html' %}
-  </div>
-  <div class="content23">
-    {% include 'books/card.html' %}
-  </div>
-  <div class="content24">
-    {% include 'books/card.html' %}
-  </div>
-  <a href="" class="end2">Show All</a>
-  <div class="content25">
-    {% include 'books/card.html' %}
-  </div>
-  <h4 class="head3">Category 1</h4>
-  <div class="content31">
-    {% include 'books/card.html' %}
-  </div>
-  <div class="content32">
-    {% include 'books/card.html' %}
-  </div>
-  <div class="content33">
-    {% include 'books/card.html' %}
-  </div>
-  <div class="content34">
-    {% include 'books/card.html' %}
-  </div>
-  <a href="" class="end3">Show All</a>
-  <div class="content35">
-    {% include 'books/card.html' %}
-  </div>
-
-  <div class="content4">
-    <h4>Category 2</h4>
-    {% include 'books/card.html' %}
-  </div>
-  <div class="content5">
-    <h4>All Books</h4>
-    {% include 'books/card.html' %}
-  </div>
-  <div class="content6">
-    {% include 'books/card.html' %}
-  </div>
+  {% endfor %}
 </div>
 {% endblock %}

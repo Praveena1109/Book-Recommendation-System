@@ -1,0 +1,19 @@
+{% extends 'books/main.html' %}
+{% load static%}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/details.css'%}">
+<div class="detail-card">
+  <img src={{book.Image}} class="left-card">
+  <div class="right-card">
+    <h2>Title: {{book.BookTitle}}</h2>
+    <h3>Author: {{book.BookAuthor}}</h3>
+    <h3>Category: {{book.Genre}}</h3>
+    <h3>Rating: {{book.AvgBookRating}} </h3>
+    <h3>ISBN: {{book.ISBN}}</h3>
+    <h3>Year of publishing: {{book.YearOfPublication}} </h3>
+    <h3>Publisher: {{book.Publisher}} </h3>
+    <h3>Description: {{book.Description}}</h3>
+    <h3>Preview Link: {{book.Previewlink}}</h3>
+  </div>
+</div>
+{% endblock%}
