@@ -8,16 +8,23 @@
   </head>
   <body>
     <div class="container">
-      <h4 class="topnav_name">Name</h4>
+      <a class="topnav_name" href="{% url 'home' %}">Name</a>
       <h4 class="topempty"></h4>
-      <a class="topnav_link1" href=""><span class="nav_name">SignUp</span></a>
-      <a class="topnav_link2" href=""><span class="nav_name">LogIn</span></a>
+      <a class="topnav_link1" href="{% url 'signup' %}"><span class="nav_name">SignUp</span></a>
+      <a class="topnav_link2" href="{% url 'login' %}"><span class="nav_name">LogIn</span></a>
       <div class="main">
         <div class="main-container">
           <div class="empty1">
           </div>
           <div class="right-side">
             <div class="header">
+              {% if messages %}
+                {% for message in messages %}
+                  <div class="alert">
+                    {{ message }}
+                  </div>
+                {% endfor %}
+              {% endif %}
               <img src="{% static 'images/user.png'%}">
               <h2>LOGIN</h2>
             </div>
@@ -28,7 +35,7 @@
                 <button class="btn">Log In</button>
                 <p>Don't have an account?</p>
                 <div class="anchortag">
-                  <a href="">SignUp</a>
+                  <a href="{% url 'signup' %}">SignUp</a>
                 </div>
               </div>
             </form>

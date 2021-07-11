@@ -16,7 +16,9 @@
 .topnav_name{
   grid-column: 1/2;
   grid-row: 1/2;
+  text-decoration: none;
   background: #000;
+  font-weight: bold;
   opacity: 0.9;
   text-transform: uppercase;
   color: #fff;

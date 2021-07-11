@@ -8,10 +8,10 @@
   </head>
   <body>
     <div class="container">
-      <h4 class="topnav_name">Name</h4>
+      <a class="topnav_name" href="{% url 'home' %}">Name</a>
       <h4 class="topempty"></h4>
-      <a class="topnav_link1" href=""><span class="nav_name">SignUp</span></a>
-      <a class="topnav_link2" href=""><span class="nav_name">LogIn</span></a>
+      <a class="topnav_link1" href="{% url 'signup' %}"><span class="nav_name">SignUp</span></a>
+      <a class="topnav_link2" href="{% url 'login' %}"><span class="nav_name">LogIn</span></a>
       <div class="main">
         <div class="main-container">
           <div class="empty1">
@@ -20,25 +20,40 @@
             <div class="header">
               <h2>CREATE  ACCOUNT</h2>
             </div>
-            <form action="">
+            <form action="" method="POST">
+              {% csrf_token %}
               <div class="input-container">
-                <input type="text" placeholder="First Name" class="input-field">
-                <input type="text" placeholder="Last Name" class="input-field">
-                <input type="text" placeholder="Email Address" class="input-field">
-                <input type="text" placeholder="Country" class="input-field">
-                <input type="password" placeholder="Password" class="input-field">
-                <input type="password" placeholder="Confirm Password" class="input-field">
-                <button class="btn">Sign Up</button>
+                {% for f in form %}
+                  {{f}} <div class="errorMessage">{{f.errors|striptags}}</div>
+                  <!-- {{form.first_name}}
+                  {{form.last_name}}
+                  {{form.username}}
+                  {{form.email}}
+                  {{form.password1}}
+                  {{form.password2}} -->
+                {% endfor %}
+                <button type="submit" class="btn">SignUp</button>
                 <p>Already have an account?</p>
                 <div class="anchortag">
-                  <a href="">LogIn</a>
+                  <a href="{% url 'login' %}">LogIn</a>
                 </div>
               </div>
             </form>
             <div class="empty2">
-
             </div>
           </div>
+          <script>
+        		var form_fields = document.getElementsByTagName('input')
+        		form_fields[1].placeholder='First Name';
+        		form_fields[2].placeholder='Last Name';
+        		form_fields[3].placeholder='Username';
+        		form_fields[4].placeholder='Email Address';
+            form_fields[5].placeholder='Password';
+            form_fields[6].placeholder='Confirm Password';
+        		for (var field in form_fields){
+        			form_fields[field].className += ' form-control'
+        		}
+	        </script>
         </div>
       </div>
     </div>

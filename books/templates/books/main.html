@@ -3,14 +3,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>My Library</title> 
+    <title>My Library</title>
     <link rel="stylesheet" href="{% static 'css/main.css'%}">
   </head>
   <body>
     <div class="container">
-      <h4 class="topnav_name">Name</h4>
+      <a class="topnav_name" href="{% url 'home' %}">Home</a>
       <p class="topempty"></p>
-      <a class="topnav_link" href=""><span class="nav_name">Logout</span></a>
+      <a class="topnav_link" href="{% url 'homepage' %}"><span class="nav_name">Logout</span></a>
       <div class="main">
         <div class="search">
   				<form class="search-form">
@@ -20,11 +20,11 @@
 			  </div>
       </div>
       <h3 class="nav_subtitle1">My Bookshelf</h3>
-      <a class="nav_link1" href=""><span class="nav_name">Favourites</span></a>
-      <a class="nav_link2" href=""><span class="nav_name">To Read</span></a>
+      <a class="nav_link1" href="{% url 'favourite' %}"><span class="nav_name">Favourites</span></a>
+      <a class="nav_link2" href="{% url 'readList' %}"><span class="nav_name">To Read</span></a>
       <h3 class="nav_subtitle2">Find Books</h3>
       <a class="nav_link3" href=""><span class="nav_name">For You</span></a>
-      <a class="nav_link4" href=""><span class="nav_name">Popular</span></a>
+      <a class="nav_link4" href="{% url 'popular' %}"><span class="nav_name">Popular</span></a>
       <a class="nav_link5" href=""><span class="nav_name">Category</span></a>
       <p class="empty"></p>
       <div class="content">

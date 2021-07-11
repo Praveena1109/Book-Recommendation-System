@@ -19,6 +19,8 @@
   background: #000;
   opacity: 0.9;
   text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
   color: #fff;
   letter-spacing: .1rem;
   padding-left: var(--left--padding);

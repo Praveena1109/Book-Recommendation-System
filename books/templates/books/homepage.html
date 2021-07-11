@@ -8,10 +8,10 @@
   </head>
   <body>
     <div class="container">
-      <h4 class="topnav_name">Name</h4>
+      <a class="topnav_name" href="{% url 'home' %}">Name</a>
       <p class="topempty"></p>
-      <a class="topnav_link1" href=""><span class="nav_name">SignUp</span></a>
-      <a class="topnav_link2" href=""><span class="nav_name">LogIn</span></a>
+      <a class="topnav_link1" href="{% url 'signup' %}"><span class="nav_name">SignUp</span></a>
+      <a class="topnav_link2" href="{% url 'login' %}"><span class="nav_name">LogIn</span></a>
       <div class="main">
         <div class="sub-main">
           <img class="main-image" src="{% static 'images/boyread.gif'%}">
@@ -19,7 +19,7 @@
             <h2 class="main-title"> Book Recommendation System</h2>
             <h3 class="main-subtitle"> Desciption </h3>
             <p class="main-description"> More details</p>
-            <a class="main-link" href=""><span class="main_name">LogIn</span></a>
+            <a class="main-link" href="{% url 'login' %}"><span class="main_name">LogIn</span></a>
           </div>
         </div>
       </div>
