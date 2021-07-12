@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>My Library</title>
+    <title>Books App</title>
     <link rel="stylesheet" href="{% static 'css/loginin.css'%}">
   </head>
   <body>
@@ -25,12 +25,6 @@
               <div class="input-container">
                 {% for f in form %}
                   {{f}} <div class="errorMessage">{{f.errors|striptags}}</div>
-                  <!-- {{form.first_name}}
-                  {{form.last_name}}
-                  {{form.username}}
-                  {{form.email}}
-                  {{form.password1}}
-                  {{form.password2}} -->
                 {% endfor %}
                 <button type="submit" class="btn">SignUp</button>
                 <p>Already have an account?</p>
@@ -44,12 +38,10 @@
           </div>
           <script>
         		var form_fields = document.getElementsByTagName('input')
-        		form_fields[1].placeholder='First Name';
-        		form_fields[2].placeholder='Last Name';
-        		form_fields[3].placeholder='Username';
-        		form_fields[4].placeholder='Email Address';
-            form_fields[5].placeholder='Password';
-            form_fields[6].placeholder='Confirm Password';
+        		form_fields[1].placeholder='Username';
+        		form_fields[2].placeholder='Email Address';
+        		form_fields[3].placeholder='Password';
+        		form_fields[4].placeholder='Confirm Password';
         		for (var field in form_fields){
         			form_fields[field].className += ' form-control'
         		}
