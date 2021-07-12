@@ -9,8 +9,8 @@
   <body>
     <div class="container">
       <a class="topnav_name" href="{% url 'home' %}">Home</a>
-      <p class="topempty"></p>
-      <a class="topnav_link" href="{% url 'homepage' %}"><span class="nav_name">Logout</span></a>
+      <p class="topempty">Hello, {{request.user}}</p>
+      <a class="topnav_link" href="{% url 'logout' %}"><span class="nav_name">Logout</span></a>
       <div class="main">
         <div class="search">
   				<form class="search-form">

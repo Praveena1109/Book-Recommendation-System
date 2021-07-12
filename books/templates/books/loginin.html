@@ -4,14 +4,14 @@
   <head>
     <meta charset="utf-8">
     <title>My Library</title>
-    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    <link rel="stylesheet" href="{% static 'css/loginin.css'%}">
   </head>
   <body>
     <div class="container">
       <a class="topnav_name" href="{% url 'home' %}">Name</a>
       <h4 class="topempty"></h4>
       <a class="topnav_link1" href="{% url 'signup' %}"><span class="nav_name">SignUp</span></a>
-      <a class="topnav_link2" href="{% url 'login' %}"><span class="nav_name">LogIn</span></a>
+      <a class="topnav_link2" href="{% url 'loginin' %}"><span class="nav_name">LogIn</span></a>
       <div class="main">
         <div class="main-container">
           <div class="empty1">
@@ -28,11 +28,12 @@
               <img src="{% static 'images/user.png'%}">
               <h2>LOGIN</h2>
             </div>
-            <form action="">
+            <form action="" method="POST">
+              {% csrf_token %}
               <div class="input-container">
-                <input type="text" placeholder="Email Address" class="input-field">
-                <input type="password" placeholder="Password" class="input-field">
-                <button class="btn">Log In</button>
+                <input type="text" name="username" placeholder="Username" class="input-field">
+                <input type="password" name="password" placeholder="Password" class="input-field">
+                <button type="submit" class="btn">Log In</button>
                 <p>Don't have an account?</p>
                 <div class="anchortag">
                   <a href="{% url 'signup' %}">SignUp</a>

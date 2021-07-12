@@ -130,7 +130,7 @@ input[type=email]:focus{
   color: #ff5ea2;
 }
 p{
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: center;
 }
 .anchortag{
@@ -154,8 +154,8 @@ a{
   grid-row: 1/2;
 }
 .alert{
-  background-color: #ccffcc;
-  color: #008000;
+  background-color: #ccebff;
+  color: #006bb3;
   padding: 10px;
 }
 .errorMessage{

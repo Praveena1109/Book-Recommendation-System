@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -16,19 +17,12 @@ class Book(models.Model):
     Previewlink = models.CharField(max_length=200, null=True)
     Image = models.CharField(max_length=200, null=True)
 
-# class User(models.Model):
-#     firstName = models.CharField(max_length=200, null=True)
-#     lastName = models.CharField(max_length=200, null=True)
-#     email = models.CharField(max_length=200, null=True)
-#     password = models.CharField(max_length=200, null=True)
-#
-#     def __str__(self):
-#         return self.email
-#
+
+
 # class Favourite(models.Model):
+#     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
 #     book = models.ForeignKey(Book, null=True, on_delete=models.SET_NULL)
-#     user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
-#
+
 # class ForYou(models.Model):
 #     book = models.ForeignKey(Book, null=True, on_delete=models.SET_NULL)
 #     user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)

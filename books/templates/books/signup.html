@@ -4,14 +4,14 @@
   <head>
     <meta charset="utf-8">
     <title>My Library</title>
-    <link rel="stylesheet" href="{% static 'css/login.css'%}">
+    <link rel="stylesheet" href="{% static 'css/loginin.css'%}">
   </head>
   <body>
     <div class="container">
       <a class="topnav_name" href="{% url 'home' %}">Name</a>
       <h4 class="topempty"></h4>
       <a class="topnav_link1" href="{% url 'signup' %}"><span class="nav_name">SignUp</span></a>
-      <a class="topnav_link2" href="{% url 'login' %}"><span class="nav_name">LogIn</span></a>
+      <a class="topnav_link2" href="{% url 'loginin' %}"><span class="nav_name">LogIn</span></a>
       <div class="main">
         <div class="main-container">
           <div class="empty1">
@@ -35,7 +35,7 @@
                 <button type="submit" class="btn">SignUp</button>
                 <p>Already have an account?</p>
                 <div class="anchortag">
-                  <a href="{% url 'login' %}">LogIn</a>
+                  <a href="{% url 'loginin' %}">LogIn</a>
                 </div>
               </div>
             </form>
