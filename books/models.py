@@ -16,12 +16,18 @@ class Book(models.Model):
     Genre = models.CharField(max_length=200, null=True)
     Previewlink = models.CharField(max_length=200, null=True)
     Image = models.CharField(max_length=200, null=True)
-
-
+    favourites = models.ManyToManyField(User, related_name='favourite',default=None, blank=True)
+    readlist = models.ManyToManyField(User, related_name='readlist',default=None, blank=True)
+    # def__str__(self):
+    #     return self.BookTitle
 
 # class Favourite(models.Model):
-#     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
-#     book = models.ForeignKey(Book, null=True, on_delete=models.SET_NULL)
+#     user = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+#     book = models.ForeignKey(Book, null=True, on_delete=models.CASCADE)
+#
+#     class Meta:
+#         unique_together=[['user', 'book']]
+
 
 # class ForYou(models.Model):
 #     book = models.ForeignKey(Book, null=True, on_delete=models.SET_NULL)

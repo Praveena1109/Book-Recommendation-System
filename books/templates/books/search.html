@@ -2,11 +2,18 @@
 {% load static%}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/home.css'%}">
-<h4 class="head1">POPULAR</h4>
+<h4 class="head1"> SEARCH RESULT</h4>
 <div class="content1">
+  {% if books|length < 1 %}
+    <p class="para">No Book Found</p>
+    <style>
+      .para{
+        margin-top:30px;
+      }
+    </style>
+  {% endif %}
   {% for book in books %}
     {% include 'books/card.html' %}
   {% endfor %}
 </div>
-{% endblock %}
- 
+{% endblock%}

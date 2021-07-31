@@ -18,7 +18,8 @@
         <h2>Rating: {{book.AvgBookRating}}</h2>
       </div>
     </div>
-    <a href="#" class="btn"> + Favourite</a>
-    <a href="#" class="btn"> + Read List</a>
+    <a href="{% url 'favourite_add' book.id %}" class="btn"> + Favourite</a>
+    <a href="{% url 'readlist_add' book.id %}" class="btn"> + To Read</a>
   </section>
 </div>
+ 

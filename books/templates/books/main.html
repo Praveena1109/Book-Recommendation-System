@@ -13,19 +13,19 @@
       <a class="topnav_link" href="{% url 'logout' %}"><span class="nav_name">Logout</span></a>
       <div class="main">
         <div class="search">
-  				<form class="search-form">
-  					<input type="text" placeholder="Search for books, authors, categories...">
+  				<form method="GET" action="/search" class="search-form">
+  					<input type="text" placeholder="Search for books..." name="query" id="query">
   					<input type="submit" value="Submit">
   				</form>
 			  </div>
       </div>
       <h3 class="nav_subtitle1">My Bookshelf</h3>
       <a class="nav_link1" href="{% url 'favourite' %}"><span class="nav_name">Favourites</span></a>
-      <a class="nav_link2" href="{% url 'readList' %}"><span class="nav_name">To Read</span></a>
+      <a class="nav_link2" href="{% url 'readlist' %}"><span class="nav_name">To Read</span></a>
       <h3 class="nav_subtitle2">Find Books</h3>
       <a class="nav_link3" href=""><span class="nav_name">For You</span></a>
       <a class="nav_link4" href="{% url 'popular' %}"><span class="nav_name">Popular</span></a>
-      <a class="nav_link5" href=""><span class="nav_name">Category</span></a>
+      <a class="nav_link5" href="{% url 'category' %}"><span class="nav_name">Category</span></a>
       <p class="empty"></p>
       <div class="content">
         {% block content%}

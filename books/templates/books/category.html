@@ -1,0 +1,20 @@
+{% extends 'books/main.html' %}
+{% load static%}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/home.css'%}">
+  <h4>CATEGORIES</h4>
+  <form method="GET" action="" class="search-form">
+    <select name="category" id="category">
+      <option selected>Choose...</option>
+      {% for category in categories %}
+        <option value="{{category.Genre}}">{{category.Genre}}</option>
+      {% endfor %}
+    </select>
+    <input type="submit" value="Search">
+  </form>
+  <div class="content1">
+    {% for book in books %}
+      {% include 'books/card.html' %}
+    {% endfor %}
+  </div>
+{% endblock %}

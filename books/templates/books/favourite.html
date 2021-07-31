@@ -1,5 +1,39 @@
 {% extends 'books/main.html' %}
 {% load static%}
 {% block content %}
-  Favourite
+<link rel="stylesheet" href="{% static 'css/home.css'%}">
+<h4 class="head1">FAVOURITES</h4>
+<div class="content1">
+  {% for book in favourites %}
+    <div class="card">
+      <figure>
+        <img src={{book.Image}}>
+      </figure>
+      <section class="details">
+        <div class="min-details">
+          <a href="{% url 'details' book.id %}">Title: {{book.BookTitle}}</a>
+        </div>
+        <div class="options">
+          <div class="options-author">
+            <h2>Author: {{book.BookAuthor}}</h2>
+          </div>
+          <div class="options-category">
+            <h2>Category: {{book.Genre}} </h2>
+          </div>
+          <div class="options-rating">
+            <h2>Rating: {{book.AvgBookRating}}</h2>
+          </div>
+        </div>
+        <a href="{% url 'favourite_add' book.id %}" class="btn"> Remove from Favourites </a>
+        <style media="screen">
+          .details > a{
+              font-size: 12px;
+              display:block;
+              width:95%;
+          }
+        </style>
+      </section>
+    </div>
+  {% endfor %}
+</div>
 {% endblock%}

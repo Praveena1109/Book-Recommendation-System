@@ -1,7 +1,7 @@
 .content1{
   display: grid;
-  height: 300vh;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  height: 75vh;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   grid-column-gap: 0.5rem;
   grid-row-gap: 2rem;
 }
@@ -12,7 +12,7 @@
     overflow: hidden;
 }
 .card > figure {
-    width: 100%;
+    width: 65%;
     margin: 10px auto 0 auto;
 }
 .card > figure > img {
@@ -21,7 +21,7 @@
 .details {
     background-color: #FFF;
     border-radius: 10px;
-    padding: 5px;  /* t: 200% */
+    padding: 5px;
     position: absolute;
     top: 77%;
     width: 200px;
