@@ -42,9 +42,11 @@
 }
 .details > .min-details {
     display: flex;
+    margin-left: 10px;
     justify-content: space-between;
 }
 .details > .options h2 {
+    margin-left: 10px;
     margin-bottom: 10px;
     font-size: 12px;
 }

@@ -2,18 +2,23 @@
 {% load static%}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/details.css'%}">
+<h2 class="title">{{book.BookTitle}}</h2>
 <div class="detail-card">
   <img src={{book.Image}} class="left-card">
   <div class="right-card">
-    <h2>Title: {{book.BookTitle}}</h2>
-    <h3>Author: {{book.BookAuthor}}</h3>
-    <h3>Category: {{book.Genre}}</h3>
-    <h3>Rating: {{book.AvgBookRating}} </h3>
-    <h3>ISBN: {{book.ISBN}}</h3>
-    <h3>Year of publishing: {{book.YearOfPublication}} </h3>
-    <h3>Publisher: {{book.Publisher}} </h3>
-    <h3>Description: {{book.Description}}</h3>
-    <h3>Preview Link: {{book.Previewlink}}</h3>
+    <h3 class="author">Author: {{book.BookAuthor}}</h3>
+    <h3 class="category">Category: {{book.Genre}}</h3>
+    <h3 class="rating">Rating: {{book.AvgBookRating}} </h3>
+    <h3 class="publisher">Publisher: {{book.Publisher}} </h3>
+    <h3 class="yop">Published year: {{book.YearOfPublication}} </h3>
+    <h3 class="ISBN">ISBN: {{book.ISBN}}</h3>
+    <a href="{{book.Previewlink}}" class="preview-link">Preview Link</a>
+    <br>
+    <a href="{% url 'favourite_add' book.id %}" class="btn"> + Favourite</a>
+    <a href="{% url 'readlist_add' book.id %}" class="btn"> + To Read</a>
   </div>
 </div>
+<h3 class="description"><b>Summary</b></h3>
+<h3 class="description">{{book.Description}}</h3>
+
 {% endblock%}

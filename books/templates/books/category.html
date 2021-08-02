@@ -3,15 +3,48 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/home.css'%}">
   <h4>CATEGORIES</h4>
-  <form method="GET" action="" class="search-form">
-    <select name="category" id="category">
-      <option selected>Choose...</option>
-      {% for category in categories %}
-        <option value="{{category.Genre}}">{{category.Genre}}</option>
-      {% endfor %}
-    </select>
-    <input type="submit" value="Search">
-  </form>
+  <div class="choose">
+    <form method="GET" action="" class="search-form">
+      <select name="category" id="category" class="category">
+        <option selected>Choose...</option>
+        {% for category in categories %}
+          <option value="{{category.Genre}}">{{category.Genre}}</option>
+        {% endfor %}
+      </select>
+      <input type="submit" value="Search">
+    </form>
+  </div>
+  <style>
+    .category
+    {
+      margin-top:10px;
+      margin-bottom:15px;
+    }
+    .category
+    {
+    	border: 0px;
+    	width: 30%;
+    	padding: 10px 10px;
+      font-size: 16px;
+    }
+    .choose input[type="submit"]
+    {
+    	border: 0px;
+      font-size: 16px;
+    	background: none;
+    	background-color: #000;
+      opacity: 0.9;
+    	color: #fff;
+    	padding: 10px;
+      cursor:pointer;
+    }
+  </style>
+  <h4 class="result"> Searching For: {{category}}</h4>
+  <style>
+    .result{
+      margin-bottom:5px;
+    }
+  </style>
   <div class="content1">
     {% for book in books %}
       {% include 'books/card.html' %}

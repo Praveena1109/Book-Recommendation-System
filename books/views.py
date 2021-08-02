@@ -93,11 +93,18 @@ def readlist(request):
     readlist = Book.objects.filter(readlist = request.user)
     return render(request,'books/readlist.html',{'readlist':readlist})
 
+def is_valid_queryparam(param):
+    return param !="" and param is not None
+
 @login_required(login_url='loginin')
 def category(request):
-    books = Book.objects.all()
+    books = Book.objects.none()
+    category = request.GET.get('category')
+    if is_valid_queryparam(category):
+        books = Book.objects.filter(Genre=category)
     categories = Book.objects.values("Genre").annotate(count=Count('Genre')).filter(count__gt=1).order_by("-count")
-    return render(request,'books/category.html', {'categories':categories, 'books':books})
+
+    return render(request,'books/category.html', {'categories':categories, 'books':books, 'category': category})
 
 @login_required(login_url='loginin')
 def details(request, pk):
