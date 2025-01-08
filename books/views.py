@@ -122,9 +122,11 @@ def recommend(BookTitle):
     recommend_list= []
     for i in indices[0]:
         recommend_list.append(user_rating_pivot.index[i])
+    print(recommend_list)
 
 @login_required(login_url='loginin')
 def foryou(request):
+    # recommend(2)
     return render(request,'books/foryou.html')
 
 @login_required(login_url='loginin')

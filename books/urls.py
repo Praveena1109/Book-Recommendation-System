@@ -14,5 +14,6 @@ urlpatterns = [
     path('readlist/',views.readlist,name="readlist"),
     path('category/',views.category,name="category"),
     path('details/<str:pk>/',views.details,name="details"),
-    path('popular/',views.popular,name="popular")
+    path('popular/',views.popular,name="popular"),
+    path('foryou/',views.foryou,name="foryou")
 ]
